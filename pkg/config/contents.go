@@ -33,12 +33,40 @@ func walkGetContents(ctx context.Context, r repositories, owner, repo, p string,
 		if rcs == nil || err != nil {
 			return nil, nil, rsp, err
 		}
+		for _, rc := range rcs {
+			if *rc.Type == "submodule" {
+				// Handle submodule here
+				if rc.SubmoduleGitURL != nil {
+					submoduleGitUrl := *rc.SubmoduleGitURL
+					sha := *rc.SHA
+					// Use handleSubmoduleContent function to retrieve submodule contents
+					return handleSubmoduleContent(ctx, r, owner, repo, submoduleGitUrl, opt)
+				}
+			}
+		}
 		if !fileExists(file, rcs) {
 			return nil, nil, &github.Response{Response: &http.Response{StatusCode: http.StatusNotFound}}, errors.New("Not found")
 		}
 	}
 	// File should exist
 	return r.GetContents(ctx, owner, repo, p, opt)
+}
+
+func handleSubmoduleContent(ctx context.Context, r repositories, owner, repo, submoduleGitUrl string, opt *github.RepositoryContentGetOptions) (*github.RepositoryContent, []*github.RepositoryContent, *github.Response, error) {
+	// Parse submoduleGitUrl to extract owner and repo of submodule
+	submoduleURL, err := url.Parse(submoduleGitUrl)
+	if err != nil {
+		return nil, nil, nil, fmt.Errorf("Error parsing submodule URL: %v", err)
+	}
+	parts := strings.Split(submoduleURL.Path, "/")
+	if len(parts) < 3 {
+		return nil, nil, nil, fmt.Errorf("Unexpected URL format: %s", submoduleGitUrl)
+	}
+	submoduleOwner := parts[1]
+	submoduleRepo := strings.TrimSuffix(parts[2], ".git")
+
+	// Call walkGetContents for the submodule
+	return walkGetContents(ctx, r, submoduleOwner, submoduleRepo, "", opt)
 }
 
 func makePaths(p string) []string {
