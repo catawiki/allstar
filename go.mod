@@ -4,11 +4,12 @@ go 1.16
 
 require (
 	github.com/Masterminds/semver/v3 v3.2.1
+	github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8 // indirect
 	github.com/bradleyfalzon/ghinstallation/v2 v2.4.0
+	github.com/catawiki/go-github/v53 v53.0.0-20230810115541-4c6e580b0354 // indirect
 	github.com/evanphx/json-patch v5.6.0+incompatible
 	github.com/gobwas/glob v0.2.3
 	github.com/google/go-cmp v0.5.9
-	github.com/google/go-github/v50 v50.2.0
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
 	github.com/matryer/is v1.4.0 // indirect
 	github.com/ossf/scorecard/v4 v4.10.5
@@ -19,3 +20,5 @@ require (
 	golang.org/x/sync v0.2.0
 	sigs.k8s.io/yaml v1.3.0
 )
+
+replace github.com/google/go-github/v53 => github.com/catawiki/go-github/v53 v53.0.0-20230810115541-4c6e580b0354
