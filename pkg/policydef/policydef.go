@@ -26,7 +26,7 @@ package policydef
 import (
 	"context"
 
-	"github.com/google/go-github/v50/github"
+	"github.com/catawiki/go-github/v50/github"
 )
 
 // Result is returned from a policy check.
