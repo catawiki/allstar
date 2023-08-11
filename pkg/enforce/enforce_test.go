@@ -24,7 +24,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-github/v50/github"
+	"github.com/catawiki/go-github/v50/github"
 	"github.com/ossf/allstar/pkg/config/operator"
 	"github.com/ossf/allstar/pkg/policydef"
 )

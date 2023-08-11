@@ -978,6 +978,10 @@ github.com/caarlos0/env/v6 v6.10.0/go.mod h1:hvp/ryKXKipEkcuYjs9mI4bBCg+UI0Yhgm5
 github.com/campoy/unique v0.0.0-20180121183637-88950e537e7e/go.mod h1:9IOqJGCPMSc6E5ydlp5NIonxObaeu/Iub/X03EKPVYo=
 github.com/carolynvs/magex v0.7.0/go.mod h1:vZB3BkRfkd5ZMtkxJkCGbdFyWGoZiuNPKhx6uEQARmY=
 github.com/casbin/casbin/v2 v2.37.0/go.mod h1:vByNa/Fchek0KZUgG5wEsl7iFsiviAYKRtgrQfcJqHg=
+github.com/catawiki/go-github/v50 v50.0.0-20230810122342-d6ec6fe519aa h1:YiPye334tS4u1HhaGLCSLIZjZEkeMkV2GRW03z+TSsk=
+github.com/catawiki/go-github/v50 v50.0.0-20230810122342-d6ec6fe519aa/go.mod h1:xgLAYQ7HtRcPZBmjy+I/T8+KKbuoHRBCP1rtkUAO0sM=
+github.com/catawiki/go-github/v50 v50.0.0-20230811121342-0605ae2cb9e3 h1:JgkupVIo5LS65/NYXYNQqR8bALY9JOQEarDoogLM4Nw=
+github.com/catawiki/go-github/v50 v50.0.0-20230811121342-0605ae2cb9e3/go.mod h1:xgLAYQ7HtRcPZBmjy+I/T8+KKbuoHRBCP1rtkUAO0sM=
 github.com/catawiki/go-github/v53 v53.0.0-20230810115541-4c6e580b0354 h1:Awlkm9nlDRG6++8WhS1Dh0/KoS20z7ZpDdkb5DmwX1k=
 github.com/catawiki/go-github/v53 v53.0.0-20230810115541-4c6e580b0354/go.mod h1:jdemUdlSJKKv1mGSZX59d8ENDyOUZqYFAthuFuV0uJA=
 github.com/cavaliercoder/go-cpio v0.0.0-20180626203310-925f9528c45e/go.mod h1:oDpT4efm8tSYHXV5tHSdRvBet/b/QzxZ+XyyPehvm3A=

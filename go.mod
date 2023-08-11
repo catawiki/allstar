@@ -6,7 +6,7 @@ require (
 	github.com/Masterminds/semver/v3 v3.2.1
 	github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8 // indirect
 	github.com/bradleyfalzon/ghinstallation/v2 v2.4.0
-	github.com/catawiki/go-github/v53 v53.0.0-20230810115541-4c6e580b0354 // indirect
+	github.com/catawiki/go-github/v50 v50.0.0-20230811121342-0605ae2cb9e3 // indirect
 	github.com/evanphx/json-patch v5.6.0+incompatible
 	github.com/gobwas/glob v0.2.3
 	github.com/google/go-cmp v0.5.9
@@ -20,5 +20,3 @@ require (
 	golang.org/x/sync v0.2.0
 	sigs.k8s.io/yaml v1.3.0
 )
-
-replace github.com/google/go-github/v53 => github.com/catawiki/go-github/v53 v53.0.0-20230810115541-4c6e580b0354

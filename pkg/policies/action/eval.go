@@ -18,7 +18,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/google/go-github/v50/github"
+	"github.com/catawiki/go-github/v50/github"
 )
 
 var requireWorkflowOnForRequire = []string{"pull_request", "push"}
