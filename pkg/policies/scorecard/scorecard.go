@@ -226,6 +226,9 @@ func listJoin(list []string) string {
 func convertLogs(logs []checker.CheckDetail) []string {
 	var s []string
 	for _, l := range logs {
+		if (l.Msg.Finding == nil) {
+		  continue
+		}
 		if l.Msg.Finding.Location == nil {
 			s = append(s, fmt.Sprintf("%v", l.Msg.Finding.Message))
 		} else {
