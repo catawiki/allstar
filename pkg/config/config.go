@@ -197,7 +197,7 @@ func fetchConfig(ctx context.Context, r repositories, owner, repoIn, name string
 		p = path.Join(operator.RepoConfigDir, name)
 	}
 	cf, _, rsp, err := walkGC(ctx, r, owner, repo, p, nil)
-	if err != nil {
+	if cf == nil || err != nil {
 		if rsp != nil && rsp.StatusCode == http.StatusNotFound {
 			return nil
 		}
