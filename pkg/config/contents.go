@@ -23,7 +23,7 @@ import (
 	"strings"
 	"path"
 
-	"github.com/catawiki/go-github/v50/github"
+	"github.com/google/go-github/v54/github"
 )
 
 func walkGetContents(ctx context.Context, r repositories, owner, repo, p string,

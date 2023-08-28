@@ -31,7 +31,7 @@ import (
 	"github.com/ossf/allstar/pkg/scorecard"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/catawiki/go-github/v50/github"
+	"github.com/google/go-github/v54/github"
 	"github.com/rs/zerolog/log"
 )
 
