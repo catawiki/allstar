@@ -25,7 +25,7 @@ import (
 	"github.com/ossf/allstar/pkg/config/operator"
 
 	jsonpatch "github.com/evanphx/json-patch"
-	"github.com/google/go-github/v50/github"
+	"github.com/google/go-github/v54/github"
 	"github.com/rs/zerolog/log"
 	"sigs.k8s.io/yaml"
 )
@@ -197,7 +197,7 @@ func fetchConfig(ctx context.Context, r repositories, owner, repoIn, name string
 		p = path.Join(operator.RepoConfigDir, name)
 	}
 	cf, _, rsp, err := walkGC(ctx, r, owner, repo, p, nil)
-	if err != nil {
+	if cf == nil || err != nil {
 		if rsp != nil && rsp.StatusCode == http.StatusNotFound {
 			return nil
 		}

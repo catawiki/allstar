@@ -18,9 +18,12 @@ import (
 	"context"
 	"errors"
 	"net/http"
+	"net/url"
+	"fmt"
+	"strings"
 	"path"
 
-	"github.com/google/go-github/v50/github"
+	"github.com/google/go-github/v54/github"
 )
 
 func walkGetContents(ctx context.Context, r repositories, owner, repo, p string,
@@ -38,7 +41,6 @@ func walkGetContents(ctx context.Context, r repositories, owner, repo, p string,
 				// Handle submodule here
 				if rc.SubmoduleGitURL != nil {
 					submoduleGitUrl := *rc.SubmoduleGitURL
-					sha := *rc.SHA
 					// Use handleSubmoduleContent function to retrieve submodule contents
 					return handleSubmoduleContent(ctx, r, owner, repo, submoduleGitUrl, opt)
 				}
